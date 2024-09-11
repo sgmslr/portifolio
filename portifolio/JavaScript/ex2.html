@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Ex. 2</title>
+</head>
+<body>
+  <h1>
+    Exercício 2
+  </h1>
+  <p></p>
+  <p>2. Crie um programa que peça ao usuario sua idade. Com base na idade, exiba uma mensagem informando se ele é criança (0-12 anos), adolescente (13-17 anos), adulto (18-64 anos) ou idoso (65 anos ou mais).</p>
+  <script>
+  // Solicita ao usuário que insira a sua idade e converte a entrada para um número inteiro
+  let idade = parseInt(prompt("Digite sua idade:"));
+
+  // Verifica a faixa etária do usuário e exibe a mensagem correspondente
+  if (idade >= 0 && idade <= 12) {
+      // Se a idade estiver entre 0 e 12 anos, é uma criança
+      alert("Você é uma criança.");
+  } else if (idade >= 13 && idade <= 17) {
+      // Se a idade estiver entre 13 e 17 anos, é um adolescente
+      alert("Você é um adolescente.");
+  } else if (idade >= 18 && idade <= 64) {
+      // Se a idade estiver entre 18 e 64 anos, é um adulto
+      alert("Você é um adulto.");
+  } else if (idade >= 65 && idade <= 125) {
+      // Se a idade estiver entre 65 e 125 anos, é um idoso
+      alert("Você é um idoso.");
+  } else if (idade >= 126) {
+      // Se a idade for maior que 125, exibe uma mensagem especial
+      alert("Parabéns! Você é a pessoa mais velha do mundo.");
+  } else {
+      // Se a idade for negativa ou não for um número, exibe uma mensagem de idade inválida
+      alert("Idade inválida, escreva somente números positivos.");
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Ex. 3</title>
+</head>
+<body>
+  <h1>
+    Exercício 3
+  </h1>
+  <p></p>
+  <p>3. Escreva um programa que peça ao usuário para inserir um número correspondente a um dia da semana (1 para Domingo, 2 para Segunda, etc.). Utilize a estrutura switch para exibir o nome do dia da semana correspondente.</p>
+  <script>
+  // Solicita ao usuário que insira um número de 1 a 7 correspondente ao dia da semana
+  let dia = parseInt(prompt("Digite um número de 1 a 7 para o dia da semana:"));
+
+  // Usa a estrutura switch para verificar qual dia da semana corresponde ao número inserido
+  switch (dia) {
+      case 1:
+          // Caso o número seja 1, exibe "Domingo"
+          alert("O dia da semana é Domingo.");
+          break;
+      case 2:
+          // Caso o número seja 2, exibe "Segunda-feira"
+          alert("O dia da semana é Segunda-feira.");
+          break;
+      case 3:
+          // Caso o número seja 3, exibe "Terça-feira"
+          alert("O dia da semana é Terça-feira.");
+          break;
+      case 4:
+          // Caso o número seja 4, exibe "Quarta-feira"
+          alert("O dia da semana é Quarta-feira.");
+          break;
+      case 5:
+          // Caso o número seja 5, exibe "Quinta-feira"
+          alert("O dia da semana é Quinta-feira.");
+          break;
+      case 6:
+          // Caso o número seja 6, exibe "Sexta-feira"
+          alert("O dia da semana é Sexta-feira.");
+          break;
+      case 7:
+          // Caso o número seja 7, exibe "Sábado"
+          alert("O dia da semana é Sábado.");
+          break;
+      default:
+          // Se o número não estiver entre 1 e 7, exibe uma mensagem de erro indicando que o número é inválido
+          alert("Número inválido. Digite um número de 1 a 7.");
+          break;
+  }
+  </script>
+</body>
+</html>

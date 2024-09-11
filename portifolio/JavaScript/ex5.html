@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Ex. 5</title>
+</head>
+<body>
+  <h1>
+    Exercício 5
+  </h1>
+  <p></p>
+  <p>5. Escreva um programa que peça ao usuário para inserir números inteiros repetidamente até que ele insira o número zero. O programa deve então exibir a soma de todos os números inseridos.</p>
+  <script>
+  // Inicializa a variável sum para armazenar a soma dos números
+  let sum = 0;
+  let number;
+
+  // Inicia um loop do-while que continua enquanto o número inserido não for zero
+  do {
+      // Solicita ao usuário que insira um número inteiro e converte a entrada para um número inteiro
+      let input = prompt("Insira um número inteiro (0 para sair):");
+      number = parseInt(input, 10);
+
+      // Verifica se a entrada é um número válido
+      if (isNaN(number)) {
+          alert("Entrada inválida. Por favor, insira um número inteiro.");
+          continue; // Pula para a próxima iteração do loop
+      }
+
+      // Adiciona o número inserido à variável sum
+      sum += number;
+  } while (number !== 0); // Condição para continuar o loop até que o número seja zero
+
+  // Exibe a soma total dos números inseridos em uma caixa de alerta
+  alert("A soma de todos os números inseridos é: " + sum +".");
+  </script>
+</body>
+</html>

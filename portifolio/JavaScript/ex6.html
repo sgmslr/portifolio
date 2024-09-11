@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Ex. 6</title>
+</head>
+<body>
+  <h1>
+    Exercício 6
+  </h1>
+  <p></p>
+  <p>6. Crie um programa que peça ao usuário para adivinhar um número entre 1 e 10. O programa deve continuar pedindo ao usuário para tentar novamente até que ele acerte. Exiba uma mensagem de parabéns quando o usuário acertar.</p>
+  <script>
+  // Gera um número aleatório entre 1 e 10 (inclusive)
+  const correctNumber = Math.floor(Math.random() * 10) + 1;
+  let guess;
+
+  // Inicia um loop do-while que continua até o usuário adivinhar o número correto
+  do {
+      // Solicita ao usuário que insira um palpite e converte a entrada para um número inteiro
+      let input = prompt("Tente adivinhar o número entre 1 e 10:");
+      guess = parseInt(input, 10);
+      
+      // Verifica se o palpite é um número válido entre 1 e 10
+      if (isNaN(guess) || guess < 1 || guess > 10) {
+          alert("Entrada inválida. Por favor, insira um número entre 1 e 10.");
+      } else if (guess !== correctNumber) {
+          // Se o palpite estiver incorreto, exibe uma mensagem para tentar novamente
+          alert("Errado! Tente novamente.");
+      }
+  } while (guess !== correctNumber); // Condição para continuar o loop até o número correto ser adivinhado
+
+  // Exibe uma mensagem de parabéns quando o usuário acertar o número
+  alert("Parabéns! Você acertou, o número correto é " + correctNumber + "!");
+  </script>
+</body>
+</html>

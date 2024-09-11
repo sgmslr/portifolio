@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Ex. 7</title>
+</head>
+<body>
+  <h1>
+    Exercício 7
+  </h1>
+  <p></p>
+  <p>7. Crie um programa que peça ao usuário para inserir 5 números inteiros e os armazene em um vetor. Em seguida, exiba o maior e o menor número inserido.</p>
+  <script>
+  // Inicializa um array vazio para armazenar os números
+  let numbers = [];
+
+  // Loop para solicitar 5 números inteiros ao usuário
+  for (let i = 0; i < 5; i++) {
+      // Solicita ao usuário que insira um número inteiro
+      let input = prompt("Insira um número inteiro (" + (i + 1) + "/5):");
+      let number = parseInt(input, 10);
+
+      // Verifica se a entrada é um número inteiro válido
+      if (isNaN(number)) {
+          alert("Entrada inválida. Por favor, insira um número inteiro.");
+          i--; // Decrementa o índice para repetir a iteração
+      } else {
+          // Adiciona o número inserido ao array
+          numbers.push(number);
+      }
+  }
+
+  // Calcula o maior número no array usando a função Math.max e o operador spread
+  let maxNumber = Math.max(...numbers);
+  
+  // Calcula o menor número no array usando a função Math.min e o operador spread
+  let minNumber = Math.min(...numbers);
+
+  // Exibe o maior número inserido em uma caixa de alerta
+  alert("O maior número inserido é: " + maxNumber + ".");
+  
+  // Exibe o menor número inserido em uma caixa de alerta
+  alert("O menor número inserido é: " + minNumber + ".");
+  </script>
+</body>
+</html>
